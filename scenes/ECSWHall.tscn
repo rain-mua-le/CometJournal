@@ -1,0 +1,226 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://img/Heart.png" type="Texture" id=1]
+[ext_resource path="res://img/Artery.png" type="Texture" id=2]
+[ext_resource path="res://img/ECSWHall.png" type="Texture" id=3]
+[ext_resource path="res://img/CementBlock.png" type="Texture" id=4]
+[ext_resource path="res://img/Vein.png" type="Texture" id=5]
+[ext_resource path="res://img/Vein2.png" type="Texture" id=6]
+[ext_resource path="res://img/Artery2.png" type="Texture" id=7]
+[ext_resource path="res://img/BloodPuddle.png" type="Texture" id=8]
+[ext_resource path="res://scenes/HanbokGirl.tscn" type="PackedScene" id=9]
+[ext_resource path="res://audio/sound/heartbeat.wav" type="AudioStream" id=10]
+[ext_resource path="res://scripts/ECSWHall.gd" type="Script" id=11]
+[ext_resource path="res://img/Face.png" type="Texture" id=12]
+[ext_resource path="res://fonts/blood.tres" type="DynamicFont" id=13]
+[ext_resource path="res://img/ShadowMonster1.png" type="Texture" id=14]
+[ext_resource path="res://img/ShadowMonster2.png" type="Texture" id=15]
+[ext_resource path="res://scenes/SceneTransitionFade.tscn" type="PackedScene" id=16]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 512, 512 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 0, 512, 512 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "beating",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 165.701, 143.312 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 174.101, 158.023 )
+
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( 6146.54, 5.11629 )
+
+[sub_resource type="SegmentShape2D" id=7]
+a = Vector2( 6147.96, 2.44661 )
+
+[sub_resource type="SegmentShape2D" id=8]
+a = Vector2( -3.07336, 800.68 )
+b = Vector2( -3.07336, 1318.6 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( -3.07336, 1302.58 )
+b = Vector2( 2.26599, 792.671 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 131.245, 656.964 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="ECSWHall" type="Sprite" parent="."]
+position = Vector2( 453.06, 402.09 )
+scale = Vector2( 1.75584, 1.56043 )
+texture = ExtResource( 3 )
+
+[node name="ECSWHall2" type="Sprite" parent="."]
+position = Vector2( 1347.13, 401.918 )
+scale = Vector2( 1.75584, 1.56043 )
+texture = ExtResource( 3 )
+
+[node name="CementBlock" type="Sprite" parent="."]
+position = Vector2( 3075.39, 1056.28 )
+scale = Vector2( 11.9995, 1 )
+texture = ExtResource( 4 )
+
+[node name="ECSWHall3" type="Sprite" parent="."]
+position = Vector2( 2168.53, 401.507 )
+scale = Vector2( 1.45658, 1.56169 )
+texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 706.353, 252.269 )
+frames = SubResource( 3 )
+animation = "beating"
+frame = 1
+playing = true
+
+[node name="Vein" type="Sprite" parent="."]
+position = Vector2( 622.2, 728.801 )
+scale = Vector2( 0.896415, 1 )
+texture = ExtResource( 5 )
+
+[node name="Artery" type="Sprite" parent="."]
+position = Vector2( 1148.63, 482.234 )
+scale = Vector2( 1, 0.714764 )
+texture = ExtResource( 2 )
+
+[node name="Vein2" type="Sprite" parent="."]
+position = Vector2( 838.102, 239.44 )
+rotation = 2.67384
+scale = Vector2( 0.881678, 1 )
+texture = ExtResource( 6 )
+
+[node name="Artery2" type="Sprite" parent="."]
+position = Vector2( 340.089, 538.782 )
+scale = Vector2( 1.1566, 1.74474 )
+texture = ExtResource( 7 )
+
+[node name="BloodPuddle" type="Sprite" parent="."]
+position = Vector2( 1389.57, 880.887 )
+scale = Vector2( 1.56725, 0.603272 )
+texture = ExtResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Face" type="Sprite" parent="."]
+position = Vector2( 2231.21, 385.077 )
+scale = Vector2( 1.19172, 1.28021 )
+texture = ExtResource( 12 )
+
+[node name="ECSWHall4" type="Sprite" parent="."]
+position = Vector2( 2891.71, 401.156 )
+scale = Vector2( 1.37118, 1.56169 )
+texture = ExtResource( 3 )
+
+[node name="ECSWHall5" type="Sprite" parent="."]
+position = Vector2( 3601.62, 401.506 )
+scale = Vector2( 1.40731, 1.56169 )
+texture = ExtResource( 3 )
+
+[node name="ECSWHall6" type="Sprite" parent="."]
+position = Vector2( 4291.89, 401.506 )
+scale = Vector2( 1.3022, 1.56169 )
+texture = ExtResource( 3 )
+
+[node name="ECSWHall7" type="Sprite" parent="."]
+position = Vector2( 5019.26, 401.506 )
+scale = Vector2( 1.54198, 1.56169 )
+texture = ExtResource( 3 )
+
+[node name="ECSWHall8" type="Sprite" parent="."]
+position = Vector2( 5780.2, 401.506 )
+scale = Vector2( 1.4303, 1.56169 )
+texture = ExtResource( 3 )
+
+[node name="ShadowMonster1" type="Sprite" parent="."]
+position = Vector2( 4272.35, 650.018 )
+scale = Vector2( 1.42737, 1.85474 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ShadowMonster1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShadowMonster1/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4501.08
+margin_top = 237.601
+margin_right = 6143.08
+margin_bottom = 1032.6
+rect_rotation = -15.3
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "The real 
+monster is ..."
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShadowMonster2" type="Sprite" parent="."]
+position = Vector2( 3039.42, 497.672 )
+scale = Vector2( 1.54749, 1.84992 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ShadowMonster2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShadowMonster2/StaticBody2D"]
+position = Vector2( -46.5795, -1.44315 )
+shape = SubResource( 5 )
+
+[node name="HanbokGirl" parent="." instance=ExtResource( 9 )]
+position = Vector2( 226.288, 956.825 )
+scale = Vector2( 2, 2 )
+SPEED = 8
+
+[node name="Camera2D" type="Camera2D" parent="HanbokGirl"]
+current = true
+zoom = Vector2( 2, 1.5 )
+limit_left = 10
+limit_top = 10
+limit_right = 6100
+limit_bottom = 1250
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 10.679, 699.456 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2.66992, 1308.14 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 6145.6, 5.33936 )
+shape = SubResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 6014.79, 654.071 )
+shape = SubResource( 10 )
+
+[node name="SceneTransitionFade" parent="." instance=ExtResource( 16 )]
+margin_right = 6100.0
+margin_bottom = 1250.0
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

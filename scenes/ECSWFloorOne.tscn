@@ -1,0 +1,257 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://scenes/BigScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/HanbokGirl.tscn" type="PackedScene" id=2]
+[ext_resource path="res://img/BigScreen.png" type="Texture" id=3]
+[ext_resource path="res://img/ECSWStairs.png" type="Texture" id=4]
+[ext_resource path="res://img/Pillar3.png" type="Texture" id=5]
+[ext_resource path="res://img/ECSWBack.png" type="Texture" id=6]
+[ext_resource path="res://img/CementBlock.png" type="Texture" id=7]
+[ext_resource path="res://img/ECSWElevator.png" type="Texture" id=8]
+[ext_resource path="res://scripts/ECSWFloorOne.gd" type="Script" id=9]
+[ext_resource path="res://audio/music/something_is_amiss.ogg" type="AudioStream" id=10]
+[ext_resource path="res://scenes/SceneTransitionFade.tscn" type="PackedScene" id=11]
+[ext_resource path="res://audio/sound/elevator_ding.wav" type="AudioStream" id=12]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 0.0831909, 306.469 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 256.332, 253.015 )
+b = Vector2( -254.372, 253.015 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -254.455, -254.719 )
+b = Vector2( 80.8375, -254.719 )
+
+[sub_resource type="SegmentShape2D" id=4]
+b = Vector2( 269.562, -2.04979 )
+
+[sub_resource type="SegmentShape2D" id=5]
+a = Vector2( -85.4056, -142.801 )
+b = Vector2( 258.886, 114.104 )
+
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( 4.00323, 153.733 )
+
+[sub_resource type="SegmentShape2D" id=7]
+a = Vector2( -12.0101, 256.222 )
+b = Vector2( -161.47, -52.6109 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 176.717, 75.7376 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( -106.511, -185.083 )
+b = Vector2( -4.4958, -35.0508 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 32.0803, 246.337 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 34.2841, 242.796 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 1024, 1024 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 1024, 1024 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1024, 0, 1024, 1024 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 1024, 1024, 1024 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1024, 1024, 1024, 1024 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 2048, 1024, 1024 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1024, 2048, 1024, 1024 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "opening",
+"speed": 6.0
+} ]
+
+[sub_resource type="SegmentShape2D" id=20]
+a = Vector2( -277.051, 256 )
+b = Vector2( 302.011, -288.09 )
+
+[sub_resource type="SegmentShape2D" id=21]
+a = Vector2( -2.70911, 204.533 )
+b = Vector2( -3.42419, -258.522 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 121.467, 331.307 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="ECSWBack" type="Sprite" parent="."]
+position = Vector2( 1517.53, -134.023 )
+scale = Vector2( 2.20411, 2.09274 )
+texture = ExtResource( 6 )
+
+[node name="CementBlock" type="Sprite" parent="."]
+position = Vector2( -324.854, 666.004 )
+scale = Vector2( 9.4705, 1 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CementBlock"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CementBlock/StaticBody2D"]
+position = Vector2( 255.873, -53.4539 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CementBlock/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="CementBlock2" type="Sprite" parent="."]
+position = Vector2( -1775.91, -98.387 )
+scale = Vector2( 3.80494, 2.32939 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CementBlock2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CementBlock2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="ECSWStairs" type="Sprite" parent="."]
+position = Vector2( 1408.84, -44.9331 )
+scale = Vector2( 2.67043, 2.60779 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ECSWStairs"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ECSWStairs/StaticBody2D"]
+position = Vector2( -9.34125, 259.638 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ECSWStairs/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ECSWStairs/StaticBody2D"]
+position = Vector2( 252.214, 107.955 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ECSWStairs/StaticBody2D"]
+shape = SubResource( 7 )
+
+[node name="BigScreen2" type="Sprite" parent="."]
+position = Vector2( 41.7639, 38.6964 )
+scale = Vector2( 5.85733, 2.88111 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BigScreen2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BigScreen2/StaticBody2D"]
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BigScreen2/StaticBody2D"]
+position = Vector2( -157.725, -67.6617 )
+shape = SubResource( 9 )
+
+[node name="Pillar3" type="Sprite" parent="."]
+position = Vector2( -1160.92, -16.7611 )
+scale = Vector2( 1.43763, 2.42174 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pillar3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar3/StaticBody2D"]
+position = Vector2( -32.1359, -5.36108 )
+shape = SubResource( 10 )
+
+[node name="Pillar4" type="Sprite" parent="."]
+position = Vector2( 1339.35, -16.4242 )
+scale = Vector2( 1.29929, 2.38507 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pillar4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar4/StaticBody2D"]
+position = Vector2( -30.1702, 4.48238 )
+shape = SubResource( 11 )
+
+[node name="BigScreen" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 2, 1 )
+frame = 5
+
+[node name="ECSWElevator" type="AnimatedSprite" parent="."]
+position = Vector2( -1998.37, 118.507 )
+scale = Vector2( 1.4775, 1.57639 )
+frames = SubResource( 19 )
+animation = "idle"
+playing = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ECSWElevator"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ECSWElevator/StaticBody2D"]
+position = Vector2( -235.133, 87.3105 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ECSWElevator/StaticBody2D"]
+position = Vector2( 66.8806, -242.494 )
+shape = SubResource( 21 )
+
+[node name="Area2D" type="Area2D" parent="ECSWElevator"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ECSWElevator/Area2D"]
+position = Vector2( -347.697, 112.993 )
+shape = SubResource( 22 )
+
+[node name="HanbokGirl" parent="." instance=ExtResource( 2 )]
+position = Vector2( 928, 686 )
+scale = Vector2( 2, 2 )
+SPEED = 8
+
+[node name="Camera2D" type="Camera2D" parent="HanbokGirl"]
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = -2750
+limit_top = -680
+limit_right = 2050
+limit_bottom = 900
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="SceneTransitionFade" parent="." instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -2750.0
+margin_top = -680.0
+margin_right = 2050.0
+margin_bottom = 920.0
+[connection signal="body_entered" from="ECSWElevator/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="ECSWElevator/Area2D" to="." method="_on_Area2D_body_exited"]

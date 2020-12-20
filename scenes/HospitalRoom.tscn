@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://img/HospitalRoom.png" type="Texture" id=1]
+[ext_resource path="res://fonts/pixelated_big.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/HospitalGirl.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/HospitalBed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/SceneTransitionFade.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/HospitalRoom.gd" type="Script" id=6]
+[ext_resource path="res://scenes/SceneTransitionPixelated.tscn" type="PackedScene" id=7]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 472.912, 12.1177 )
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 92.3045, 88.4129 )
+
+[sub_resource type="SegmentShape2D" id=3]
+b = Vector2( -166.587, 168.812 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 653.747, 6.005 )
+b = Vector2( -1.03381, 3.17657 )
+
+[sub_resource type="SegmentShape2D" id=5]
+b = Vector2( 85.2332, -76.0194 )
+
+[node name="HospitalRoom" type="Sprite"]
+position = Vector2( -1.41418, 1.41418 )
+texture = ExtResource( 1 )
+script = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 1, -1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -188.274, 149.451 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 292.742, 162.635 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -197.899, 161.431 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -353.553, 380.423 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 285.671, 390.323 )
+shape = SubResource( 5 )
+
+[node name="HospitalGirl" parent="." instance=ExtResource( 3 )]
+position = Vector2( -127.272, 225.485 )
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2, -2 )
+current = true
+zoom = Vector2( 1, 1.2 )
+
+[node name="HospitalBed" parent="." instance=ExtResource( 4 )]
+position = Vector2( 263.684, 247.38 )
+
+[node name="SceneTransitionFade" parent="." instance=ExtResource( 5 )]
+margin_left = -514.0
+margin_top = -512.0
+margin_right = -514.0
+margin_bottom = -512.0
+
+[node name="PixelatedTransition" parent="." instance=ExtResource( 7 )]
+margin_left = -516.0
+margin_top = -514.0
+margin_right = -516.0
+margin_bottom = -514.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -366.0
+margin_top = -462.0
+margin_right = 768.0
+margin_bottom = -67.0
+custom_fonts/font = ExtResource( 2 )
+text = "Thanks for 
+playing!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="dream" from="HospitalBed" to="." method="_on_HospitalBed_dream"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Poem.gd" type="Script" id=1]
+[ext_resource path="res://fonts/handwritten.tres" type="DynamicFont" id=2]
+
+[node name="Control" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1029.0
+margin_bottom = 807.0
+color = Color( 0.721569, 0.717647, 0.717647, 1 )
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+margin_left = 326.631
+margin_top = 320.638
+margin_right = 671.631
+margin_bottom = 378.638
+window_title = "Comet Journal"
+dialog_text = "There is a new poem to read in the journal. Read it?"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = 394.892
+margin_top = 676.932
+margin_right = 638.892
+margin_bottom = 768.932
+custom_fonts/font = ExtResource( 2 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 42.0448
+margin_top = 48.772
+margin_right = 750.045
+margin_bottom = 217.772
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The voices tell me to beware the
+monster in front of me but all I see
+is
+me in the mirror."
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

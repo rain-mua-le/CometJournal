@@ -1,0 +1,446 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://scenes/HanbokGirl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://img/CementBlock.png" type="Texture" id=2]
+[ext_resource path="res://img/FlowerPlot.png" type="Texture" id=3]
+[ext_resource path="res://img/Tree1.png" type="Texture" id=4]
+[ext_resource path="res://img/DirtPlot.png" type="Texture" id=5]
+[ext_resource path="res://img/Tree2.png" type="Texture" id=6]
+[ext_resource path="res://scenes/ConstructionSign.tscn" type="PackedScene" id=7]
+[ext_resource path="res://img/Walkway.png" type="Texture" id=8]
+[ext_resource path="res://img/Roadway.png" type="Texture" id=9]
+[ext_resource path="res://img/SkyBridge.png" type="Texture" id=10]
+[ext_resource path="res://img/SkyBridgePillars.png" type="Texture" id=11]
+[ext_resource path="res://img/ECSN.png" type="Texture" id=12]
+[ext_resource path="res://img/GenericBuilding.png" type="Texture" id=13]
+[ext_resource path="res://scenes/ECSW.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scripts/West.gd" type="Script" id=15]
+[ext_resource path="res://scenes/SceneTransitionFade.tscn" type="PackedScene" id=16]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 405.342, 4 )
+b = Vector2( -98.6582, 4 )
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 0.718018, 3050.48 )
+
+[sub_resource type="SegmentShape2D" id=3]
+b = Vector2( 2.34692, 3039.68 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 487.301, 12.374 )
+b = Vector2( -17.2687, 12.374 )
+
+[sub_resource type="SegmentShape2D" id=5]
+a = Vector2( 511.328, 12.374 )
+
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( 1032.47, 0.75061 )
+
+[sub_resource type="SegmentShape2D" id=7]
+a = Vector2( 498.087, 6.5918 )
+
+[sub_resource type="SegmentShape2D" id=8]
+a = Vector2( 0.998657, 263.46 )
+b = Vector2( 0.287231, -1251.2 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 0.287231, 251.444 )
+b = Vector2( -6.49231, -1774.34 )
+
+[sub_resource type="SegmentShape2D" id=10]
+a = Vector2( -2049.77, -1 )
+b = Vector2( 1014.23, 15 )
+
+[sub_resource type="SegmentShape2D" id=11]
+a = Vector2( -8.84424, -1404.73 )
+
+[sub_resource type="SegmentShape2D" id=12]
+a = Vector2( 1997.36, 9.16675 )
+b = Vector2( -566.541, 9.16675 )
+
+[sub_resource type="SegmentShape2D" id=13]
+a = Vector2( -1.52979, -2240.02 )
+b = Vector2( -17.5298, -672.02 )
+
+[node name="West" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="CementBlock" type="Sprite" parent="."]
+position = Vector2( 1281.84, 2313.19 )
+scale = Vector2( 0.984375, 5.99945 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock2" type="Sprite" parent="."]
+position = Vector2( 1537.68, 526.301 )
+scale = Vector2( 1.98443, 1 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock3" type="Sprite" parent="."]
+position = Vector2( 179.563, 526.208 )
+scale = Vector2( 3.32651, 1 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock4" type="Sprite" parent="."]
+position = Vector2( 1282.22, -493.591 )
+scale = Vector2( 1, 2.99371 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock5" type="Sprite" parent="."]
+position = Vector2( -250.664, -1508.64 )
+scale = Vector2( 6.99154, 1 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock8" type="Sprite" parent="."]
+position = Vector2( -1277.47, -3047.67 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock9" type="Sprite" parent="."]
+position = Vector2( -1768.08, -3046.88 )
+texture = ExtResource( 2 )
+
+[node name="CementBlock7" type="Sprite" parent="."]
+position = Vector2( -767.914, -3038.15 )
+texture = ExtResource( 2 )
+
+[node name="FlowerPlot27" type="Sprite" parent="."]
+position = Vector2( -346.79, 1051.48 )
+scale = Vector2( 1.31927, 1.00602 )
+texture = ExtResource( 3 )
+
+[node name="GenericBuilding" type="Sprite" parent="."]
+position = Vector2( -316.778, 2562.62 )
+scale = Vector2( 3.33196, 5.07311 )
+texture = ExtResource( 13 )
+
+[node name="Roadway" type="Sprite" parent="."]
+position = Vector2( 1795.17, -2021.71 )
+texture = ExtResource( 9 )
+
+[node name="Roadway2" type="Sprite" parent="."]
+position = Vector2( 1284.24, -2021.71 )
+texture = ExtResource( 9 )
+
+[node name="Roadway3" type="Sprite" parent="."]
+position = Vector2( 773.136, -2020.22 )
+texture = ExtResource( 9 )
+
+[node name="Roadway4" type="Sprite" parent="."]
+position = Vector2( 261.091, -2021.16 )
+texture = ExtResource( 9 )
+
+[node name="Roadway5" type="Sprite" parent="."]
+position = Vector2( -241.027, -2020.22 )
+texture = ExtResource( 9 )
+
+[node name="Roadway6" type="Sprite" parent="."]
+position = Vector2( -751.487, -2020.22 )
+texture = ExtResource( 9 )
+
+[node name="Roadway7" type="Sprite" parent="."]
+position = Vector2( -1263.28, -2019.28 )
+texture = ExtResource( 9 )
+
+[node name="Roadway8" type="Sprite" parent="."]
+position = Vector2( -1773.91, -2020.22 )
+texture = ExtResource( 9 )
+
+[node name="CementBlock6" type="Sprite" parent="."]
+position = Vector2( 13.259, -2535.46 )
+scale = Vector2( 7.95417, 1 )
+texture = ExtResource( 2 )
+
+[node name="FlowerPlot28" type="Sprite" parent="."]
+position = Vector2( 1791.32, -3047.36 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot29" type="Sprite" parent="."]
+position = Vector2( 1280.14, -3046.96 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot32" type="Sprite" parent="."]
+position = Vector2( -253.994, -3049.92 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot31" type="Sprite" parent="."]
+position = Vector2( 256.603, -3048.46 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot30" type="Sprite" parent="."]
+position = Vector2( 768.567, -3047.75 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 549.162, 503.725 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 14 )]
+position = Vector2( -762.373, -3399.1 )
+scale = Vector2( 1.5, 1.6 )
+
+[node name="HanbokGirl" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1273.44, 3656.51 )
+scale = Vector2( 2, 2 )
+SPEED = 8
+
+[node name="Camera2D" type="Camera2D" parent="HanbokGirl"]
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = -2000
+limit_right = 2010
+limit_bottom = 3800
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1130.38, 3848.72 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1030.71, 807.956 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1532.85, 811.732 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 531.266, 768.868 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1537.74, 771.537 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0.482422, 262.38 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1541.21, 268.761 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1026.94, -11.3265 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1540.4, 11.3264 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 8, -1272 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2017.22, -1406.97 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 50.8545, -2805.46 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2064, -1072 )
+shape = SubResource( 13 )
+
+[node name="FlowerPlot" type="Sprite" parent="."]
+position = Vector2( 774.88, 3598.37 )
+texture = ExtResource( 3 )
+
+[node name="DirtPlot" type="Sprite" parent="."]
+position = Vector2( 775.629, 3085.43 )
+texture = ExtResource( 5 )
+
+[node name="FlowerPlot2" type="Sprite" parent="."]
+position = Vector2( 775.253, 2571.82 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot3" type="Sprite" parent="."]
+position = Vector2( 771.875, 1544.22 )
+texture = ExtResource( 3 )
+
+[node name="DirtPlot3" type="Sprite" parent="."]
+position = Vector2( 774.395, 2057.21 )
+texture = ExtResource( 5 )
+
+[node name="DirtPlot2" type="Sprite" parent="."]
+position = Vector2( 771.875, 1034.53 )
+texture = ExtResource( 5 )
+
+[node name="Tree1" type="Sprite" parent="."]
+position = Vector2( 771.957, 2868.69 )
+texture = ExtResource( 4 )
+
+[node name="Tree2" type="Sprite" parent="."]
+position = Vector2( 739.92, 1827.52 )
+texture = ExtResource( 6 )
+
+[node name="Tree3" type="Sprite" parent="."]
+position = Vector2( 750.599, 802.362 )
+texture = ExtResource( 4 )
+
+[node name="DirtPlot4" type="Sprite" parent="."]
+position = Vector2( 1791.95, 3597.77 )
+texture = ExtResource( 5 )
+
+[node name="FlowerPlot4" type="Sprite" parent="."]
+position = Vector2( 1791.75, 3090.39 )
+texture = ExtResource( 3 )
+
+[node name="DirtPlot6" type="Sprite" parent="."]
+position = Vector2( 1790.81, 2574.05 )
+texture = ExtResource( 5 )
+
+[node name="FlowerPlot5" type="Sprite" parent="."]
+position = Vector2( 1793.01, 2058.69 )
+texture = ExtResource( 3 )
+
+[node name="DirtPlot5" type="Sprite" parent="."]
+position = Vector2( 1791.75, 1551.85 )
+texture = ExtResource( 5 )
+
+[node name="FlowerPlot6" type="Sprite" parent="."]
+position = Vector2( 1791.53, 1039.81 )
+texture = ExtResource( 3 )
+
+[node name="Tree4" type="Sprite" parent="."]
+position = Vector2( 1762.95, 3417.8 )
+texture = ExtResource( 6 )
+
+[node name="Tree5" type="Sprite" parent="."]
+position = Vector2( 1788.14, 2344.34 )
+texture = ExtResource( 4 )
+
+[node name="Tree6" type="Sprite" parent="."]
+position = Vector2( 1732.71, 1288.07 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1905.85, 500.435 )
+
+[node name="Walkway" type="Sprite" parent="."]
+position = Vector2( 259.675, 2320.94 )
+scale = Vector2( 1.01867, 6.01086 )
+texture = ExtResource( 8 )
+
+[node name="FlowerPlot18" type="Sprite" parent="."]
+position = Vector2( 256.248, 13.0587 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot7" type="Sprite" parent="."]
+position = Vector2( -263.176, -487.626 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot8" type="Sprite" parent="."]
+position = Vector2( 756.246, -487.244 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot9" type="Sprite" parent="."]
+position = Vector2( 758.191, 13.0237 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot10" type="Sprite" parent="."]
+position = Vector2( 768.945, -1004.92 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot11" type="Sprite" parent="."]
+position = Vector2( 256.524, -1004.14 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot12" type="Sprite" parent="."]
+position = Vector2( -256.921, 7.26929 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot13" type="Sprite" parent="."]
+position = Vector2( 251.499, -482.019 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot14" type="Sprite" parent="."]
+position = Vector2( -250.823, -1005.77 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot15" type="Sprite" parent="."]
+position = Vector2( -766.183, 10.1594 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot16" type="Sprite" parent="."]
+position = Vector2( -766.183, -499.872 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot17" type="Sprite" parent="."]
+position = Vector2( -766.183, -1007.64 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot19" type="Sprite" parent="."]
+position = Vector2( -1278.19, -1009.93 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot26" type="Sprite" parent="."]
+position = Vector2( -1278.19, 10.6829 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot20" type="Sprite" parent="."]
+position = Vector2( -1278.19, -496.539 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot21" type="Sprite" parent="."]
+position = Vector2( -1787.88, -1006.06 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot22" type="Sprite" parent="."]
+position = Vector2( -1789.77, -497.063 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot23" type="Sprite" parent="."]
+position = Vector2( -1788.82, 9.80533 )
+texture = ExtResource( 3 )
+
+[node name="DirtPlot8" type="Sprite" parent="."]
+position = Vector2( 1792.73, -1001.95 )
+texture = ExtResource( 5 )
+
+[node name="FlowerPlot25" type="Sprite" parent="."]
+position = Vector2( 1793.62, -1514.09 )
+texture = ExtResource( 3 )
+
+[node name="FlowerPlot24" type="Sprite" parent="."]
+position = Vector2( 1793.85, -493.302 )
+texture = ExtResource( 3 )
+
+[node name="DirtPlot7" type="Sprite" parent="."]
+position = Vector2( 1791.76, 18.4246 )
+texture = ExtResource( 5 )
+
+[node name="SkyBridgePillars" type="Sprite" parent="."]
+position = Vector2( 1293.44, -624.296 )
+scale = Vector2( 2.757, 2.1418 )
+texture = ExtResource( 11 )
+
+[node name="Tree7" type="Sprite" parent="."]
+position = Vector2( 1799.14, -277.006 )
+scale = Vector2( 1, 1.14283 )
+texture = ExtResource( 4 )
+
+[node name="Tree8" type="Sprite" parent="."]
+position = Vector2( 1753.84, -1201.68 )
+texture = ExtResource( 6 )
+
+[node name="ECSN" type="Sprite" parent="."]
+position = Vector2( -1259.15, -868.264 )
+scale = Vector2( 1.53516, 1.85156 )
+texture = ExtResource( 12 )
+
+[node name="SkyBridge" type="Sprite" parent="."]
+position = Vector2( 699.19, -545.335 )
+scale = Vector2( 8.05124, 4.73624 )
+texture = ExtResource( 10 )
+
+[node name="SceneTransitionFade" parent="." instance=ExtResource( 16 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -2500.0
+margin_top = -4000.0
+margin_right = 3000.0
+margin_bottom = 4000.0
+rect_min_size = Vector2( -2500, 0 )
+[connection signal="enterECSW" from="StaticBody2D4" to="." method="_on_StaticBody2D4_enterECSW"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+// NOTE: this shader is a modified version of the shader that fleurInestimable posted on Reddit. Link below:
+// https://www.reddit.com/r/godot/comments/8b6scy/shader_that_pixelates_smooth_sprites/
+
+uniform vec2 size;
+
+void fragment()
+{
+	COLOR = textureLod(SCREEN_TEXTURE, round(SCREEN_UV * size) / size, 0.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/size = null
+
+[node name="PixelatedTransition" type="ColorRect"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
